@@ -10,15 +10,12 @@
 	<a href="">Here you go</a>
 </div>
 
-<div>
-	<p>Yay! The second part</p>
-	<a href="">Tap me to go forward!</a>
-</div>
-
-<div>
-	<p>This is the third</p>
-	<a href="">Click me</a>
-</div>
+{% for post in posts %}
+    {{ post }}
+    <div>
+    	<p>published: {{ post.published_date }}</p>
+    </div>
+{% endfor %}
 
 <p>Hi there</p>
 <p>It works!</p>
